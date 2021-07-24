@@ -1,0 +1,42 @@
+.div-calculadora {
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 15px;
+}
+
+.tecla {
+    font-family: 'Source Code Pro', monospace;
+    user-select: none;
+    width: 30px;
+    border: 3px solid rgb(255, 196, 0);
+    text-align: center;
+    background-color: rgb(240, 184, 0);
+}
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.tecla:hover {
+    background-color: rgb(55, 58, 58);
+    color: #FFF;
+    cursor: pointer;
+}
+
+.tecla-igual {
+    width: 110px;
+}
+
+.resultado {
+    text-align: right;
+    border: 2px solid #969696;
+    width: 222px;
+    max-height: 42px;
+    min-height: 24px;
+}
+
+
+
+.linha {
+    display: flex;
+}
