@@ -1,0 +1,294 @@
+<html>
+
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+        <style>
+            .div-calculadora {
+                margin-top: 30px;
+                margin-left: 30px;
+                padding: 15px;
+            }
+    
+            .tecla {
+                font-family: 'Source Code Pro', monospace;
+                user-select: none;
+                width: 30px;
+                border: 3px solid rgb(255, 196, 0);
+                text-align: center;
+                background-color: rgb(240, 184, 0);
+            }
+    
+            h1 {
+                font-family: 'Source Code Pro', monospace;
+            }
+    
+            .tecla:hover {
+                background-color: rgb(55, 58, 58);
+                color: #FFF;
+                cursor: pointer;
+            }
+    
+            .tecla-igual {
+                width: 110px;
+            }
+    
+            .resultado {
+                text-align: right;
+                border: 2px solid #969696;
+                width: 222px;
+                max-height: 42px;
+                min-height: 24px;
+            }
+    
+    
+    
+            .linha {
+                display: flex;
+            }
+        </style>
+    </head>
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <div id="resultado" class="div-calculadora resultado">
+        <span id="valor"></span>
+    </div>
+    <div class="linha">
+        <div id="um" class="div-calculadora tecla" onclick="teclaUm()">
+            <span>1</span>
+        </div>
+        <div id="dois" class="div-calculadora tecla" onclick="teclaDois()">
+            <span>2</span>
+        </div>
+        <div id="tres" class="div-calculadora tecla" onclick="teclaTres()">
+            <span>3</span>
+        </div>
+    </div>
+    <div class="linha">
+        <div id="quatro" class="div-calculadora tecla" onclick="teclaQuatro()">
+            <span>4</span>
+        </div>
+        <div id="cinco" class="div-calculadora tecla" onclick="teclaCinco()">
+            <span>5</span>
+        </div>
+        <div id="seis" class="div-calculadora tecla" onclick="teclaSeis()">
+            <span>6</span>
+        </div>
+    </div>
+    <div class="linha">
+        <div id="sete" class="div-calculadora tecla" onclick="teclaSete()">
+            <span>7</span>
+        </div>
+        <div id="oito" class="div-calculadora tecla" onclick="teclaOito()">
+            <span>8</span>
+        </div>
+        <div id="nove" class="div-calculadora tecla" onclick="teclaNove()">
+            <span>9</span>
+        </div>
+    </div>
+    <div class="linha">
+        <div id="somar" class="div-calculadora tecla" onclick="teclaSomar()">
+            <span>+</span>
+        </div>
+        <div id="zero" class="div-calculadora tecla" onclick="teclaZero()">
+            <span>0</span>
+        </div>
+        <div id="subtrair" class="div-calculadora tecla" onclick="teclaSubtrair()">
+            <span>-</span>
+        </div>
+    </div>
+    <div class="linha">
+        <div id="dividir" class="div-calculadora tecla" onclick="teclaDividir()">
+            <span>/</span>
+        </div>
+        <div id="multiplicar" class="div-calculadora tecla" onclick="teclaMultiplicar()">
+            <span>*</span>
+        </div>
+        <div id="igual" class="div-calculadora tecla" onclick="teclaIgual()">
+            <span>=</span>
+        </div>
+    </div>
+
+
+    <script>
+        /*
+            Logica para calculadora
+            1. teclou uma tecla
+                2. se tecla é numero
+                    3. se sinal é vazio 
+                        4. primeiroNumero recebe valor
+                    5. senão
+                        6. segundoNUmero recebe valor
+                7. senao
+                    8. se sinal é '='
+                        9. calcula o resultado
+                    10. senao
+                        11. sinal recebe valor
+        */
+               
+        var Numero = "";
+        var primeiroNumero = "";
+        var segundoNumero = "";
+        var resultado = "";
+        var sinal = "";
+
+        function teclaUm() {
+
+/*
+                    3. se sinal é vazio 
+                        4. primeiroNumero recebe valor
+                    5. senão
+                        6. segundoNUmero recebe valor
+*/
+
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 1;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 1;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+
+            
+        }
+        function teclaDois() {
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 2;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 2;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+        }
+        function teclaTres() {
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 3;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 3;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+        }
+        function teclaQuatro() {
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 4;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 4;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+        }
+        function teclaCinco() {
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 5;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 5;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+        }
+        function teclaSeis() {
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 6;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 6;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+        }
+        function teclaSete() {
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 7;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 7;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+        }
+        function teclaOito() {
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 8;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 8;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+        }
+        function teclaNove() {
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 9;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 9;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+        }
+        function teclaZero() {
+            if ( sinal == "" ) {
+                primeiroNumero = primeiroNumero + 0;
+                document.getElementById("valor").innerText = primeiroNumero;
+            } else {
+                segundoNumero = segundoNumero + 0;
+                document.getElementById("valor").innerText = segundoNumero;
+            }
+        }
+        function teclaSubtrair() {
+            sinal = "-";
+        }
+        function teclaSomar() {
+/*
+                        11. sinal recebe valor da tecla
+*/
+
+            sinal = "+";
+           
+        }
+        function teclaMultiplicar() {
+            sinal = "*";
+        }
+        function teclaDividir() {
+            sinal = "/";
+        }
+        function teclaIgual() {            
+            
+            //  9. calcula o resultado
+
+            /*
+            
+                Se sinal for "+" entao primeiroNumero + segundoNumero
+                Se sinal for "-" entao primeiroNumero - segundoNumero
+            */
+            if (sinal == "*") {
+                resultado = parseFloat(primeiroNumero) * parseFloat(segundoNumero);
+                document.getElementById("valor").innerText = resultado;
+            } 
+            if(sinal == "+") {
+                resultado = parseFloat(primeiroNumero) + parseFloat(segundoNumero);
+                document.getElementById("valor").innerText = resultado; 
+            }
+            if( sinal == "/") {
+
+                if( segundoNumero == "0") { 
+                    document.getElementById("valor").innerText = "Não é possivel dividir por zero";
+                } else {
+                    resultado = parseFloat(primeiroNumero) / parseFloat(segundoNumero);
+                    document.getElementById("valor").innerText = resultado; 
+                }
+            } 
+            if (sinal == "-"){
+                resultado = parseFloat(primeiroNumero) - parseFloat(segundoNumero);
+                document.getElementById("valor").innerText = resultado; 
+            }
+        }
+           // criar uma função para cada tecla da calculadora
+          // adicionar os botões somar, dividir, subtrair e multiplicar 
+         // completar os outros numeros até 0
+        //desafio: fazer a função somar funcionar clicando nos botões da calculadora
+    </script>
+</body>
+
+</html>
