@@ -28,23 +28,30 @@
                                         6. segundoNUmero recebe valor
                 */
                 
-                            if ( sinal == "" ) {
-                                primeiroNumero = primeiroNumero + 1;
-                                document.getElementById("valor").innerText = primeiroNumero;
-                            } else {
-                                segundoNumero = segundoNumero + 1;
-                                document.getElementById("valor").innerText = segundoNumero;
-                            }
+                                        if ( sinal == "" ) {
+                                            if (primeiroNumero.length < 20) {
+                                                primeiroNumero = primeiroNumero + 1;
+                                                document.getElementById("valor").innerText = primeiroNumero; 
+                                            }
+                                        } else {
+                                            if (segundoNumero.length < 20) {
+                                                segundoNumero = segundoNumero + 1;
+                                                document.getElementById("valor").innerText = segundoNumero;
+                                            }
+                                        }
                 
-                            
                         }
                         function teclaDois() {
                             if ( sinal == "" ) {
-                                primeiroNumero = primeiroNumero + 2;
-                                document.getElementById("valor").innerText = primeiroNumero;
+                                if (primeiroNumero.length < 20) {
+                                    primeiroNumero = primeiroNumero + 2;
+                                    document.getElementById("valor").innerText = primeiroNumero; 
+                                }
                             } else {
-                                segundoNumero = segundoNumero + 2;
-                                document.getElementById("valor").innerText = segundoNumero;
+                                if (segundoNumero.length < 20) {
+                                    segundoNumero = segundoNumero + 2;
+                                    document.getElementById("valor").innerText = segundoNumero;
+                                }
                             }
                         }
                         function teclaTres() {
@@ -166,6 +173,9 @@
                                 resultado = parseFloat(primeiroNumero) - parseFloat(segundoNumero);
                                 document.getElementById("valor").innerText = resultado; 
                             }
+                            primeiroNumero = resultado;
+                            segundoNumero = "";
+                            sinal = "";
                         }
                            // criar uma função para cada tecla da calculadora
                           // adicionar os botões somar, dividir, subtrair e multiplicar 
