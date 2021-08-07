@@ -18,6 +18,7 @@ var primeiroNumero = "";
 var segundoNumero = "";
 var resultado = "";
 var sinal = "";
+var numeroRepetido = 10;
 
 function teclaUm() {
 
@@ -29,12 +30,12 @@ function teclaUm() {
     */
 
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 1;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 1;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -43,12 +44,12 @@ function teclaUm() {
 }
 function teclaDois() {
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 2;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 2;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -56,12 +57,12 @@ function teclaDois() {
 }
 function teclaTres() {
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 3;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 3;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -69,12 +70,12 @@ function teclaTres() {
 }
 function teclaQuatro() {
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 4;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 4;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -82,12 +83,12 @@ function teclaQuatro() {
 }
 function teclaCinco() {
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 5;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 5;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -95,12 +96,12 @@ function teclaCinco() {
 }
 function teclaSeis() {
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 6;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 6;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -108,12 +109,12 @@ function teclaSeis() {
 }
 function teclaSete() {
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 7;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 7;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -121,12 +122,12 @@ function teclaSete() {
 }
 function teclaOito() {
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 8;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 8;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -134,12 +135,12 @@ function teclaOito() {
 }
 function teclaNove() {
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 9;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 9;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -147,12 +148,12 @@ function teclaNove() {
 }
 function teclaZero() {
     if (sinal == "") {
-        if (primeiroNumero.length < 20) {
+        if (primeiroNumero.length < numeroRepetido) {
             primeiroNumero = primeiroNumero + 0;
             document.getElementById("valor").innerText = primeiroNumero;
         }
     } else {
-        if (segundoNumero.length < 20) {
+        if (segundoNumero.length < numeroRepetido) {
             segundoNumero = segundoNumero + 0;
             document.getElementById("valor").innerText = segundoNumero;
         }
@@ -184,30 +185,32 @@ function teclaIgual() {
         Se sinal for "+" entao primeiroNumero + segundoNumero
         Se sinal for "-" entao primeiroNumero - segundoNumero
     */
-    if (sinal == "*") {
-        resultado = parseFloat(primeiroNumero) * parseFloat(segundoNumero);
-        document.getElementById("valor").innerText = resultado;
-    }
-    if (sinal == "+") {
-        resultado = parseFloat(primeiroNumero) + parseFloat(segundoNumero);
-        document.getElementById("valor").innerText = resultado;
-    }
-    if (sinal == "/") {
-
-        if (segundoNumero == "0") {
-            document.getElementById("valor").innerText = "Não é possivel dividir por zero";
-        } else {
-            resultado = parseFloat(primeiroNumero) / parseFloat(segundoNumero);
+    if (segundoNumero != "") {
+        if (sinal == "*") {
+            resultado = parseFloat(primeiroNumero) * parseFloat(segundoNumero);
             document.getElementById("valor").innerText = resultado;
         }
+        if (sinal == "+") {
+            resultado = parseFloat(primeiroNumero) + parseFloat(segundoNumero);
+            document.getElementById("valor").innerText = resultado;
+        }
+        if (sinal == "/") {
+
+            if (segundoNumero == "0") {
+                document.getElementById("valor").innerText = "Não é possivel dividir por zero";
+            } else {
+                resultado = parseFloat(primeiroNumero) / parseFloat(segundoNumero);
+                document.getElementById("valor").innerText = resultado;
+            }
+        }
+        if (sinal == "-") {
+            resultado = parseFloat(primeiroNumero) - parseFloat(segundoNumero);
+            document.getElementById("valor").innerText = resultado;
+        }
+        primeiroNumero = resultado;
+        segundoNumero = "";
+        sinal = "";
     }
-    if (sinal == "-") {
-        resultado = parseFloat(primeiroNumero) - parseFloat(segundoNumero);
-        document.getElementById("valor").innerText = resultado;
-    }
-    primeiroNumero = resultado;
-    segundoNumero = "";
-    sinal = "";
 }
                            // criar uma função para cada tecla da calculadora
                           // adicionar os botões somar, dividir, subtrair e multiplicar 
